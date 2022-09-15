@@ -48,12 +48,18 @@ app.get('/chat', function (req, res) {
     } else if (userInputText.indexOf('名前') > -1) {
         msg.push({
             type: 'text',
-            value: `愚地独歩`
+            value: `愚地独歩 doppyって呼んでね!`
         });
     } else if (userInputText.indexOf('最新動画') > -1) {
         msg.push({
             type: 'text',
             value: `https://www.youtube.com/embed/?list=UUUdlDvZJGGP78zvta3swIhw`
+        });
+    }
+    else if (userInputText.indexOf('スケジュール') > -1) {
+        msg.push({
+            type: 'text',
+            value: `dev-aの配信予定はこちら \nhttps://veescheduler.netlify.app/`
         });
     } else {
         msg.push({
